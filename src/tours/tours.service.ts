@@ -16,17 +16,17 @@ export class ToursService {
   }
 
   findOne(id: number) {
-    return this.prisma.user.findUnique({ where: { id } });
+    return this.prisma.tour.findUnique({ where: { id } });
   }
 
   update(id: number, updateTourDto: UpdateTourDto) {
-    return this.prisma.user.update({
+    return this.prisma.tour.update({
       where: { id },
       data: updateTourDto,
     });
   }
 
   remove(id: number) {
-    return this.prisma.user.delete({ where: { id } });
+    return this.prisma.tour.delete({ where: { id } });
   }
 }
